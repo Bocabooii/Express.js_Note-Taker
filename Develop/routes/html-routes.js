@@ -29,7 +29,7 @@ router.delete('/api/notes/:id', (req, res) => {
     return note.id !== req.params.id;
   });
   fs.writeFileSync("db/db.json",JSON.stringify(newNotes));
-  res.json("Note deleted.");
+  res.json("Deleted Note.");
 });
 
 module.exports = router;
